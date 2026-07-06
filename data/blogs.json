@@ -1,0 +1,126 @@
+[
+  {
+    "title": "Best Time to Visit Kerala",
+    "slug": "best-time-to-visit-kerala",
+    "excerpt": "A clear month-by-month note on when Kerala feels cool, lush, festive, or quieter.",
+    "category": "Planning",
+    "coverImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1400&q=85",
+    "publishedDate": "2026-01-08",
+    "readTime": "5 min read",
+    "author": "TripPort Planning Team",
+    "seo": {
+      "title": "Best Time to Visit Kerala | TripPort Blog",
+      "description": "Month-by-month guidance on the best time to visit Kerala for hills, backwaters, honeymoon trips, and monsoon travel."
+    },
+    "content": [
+      {
+        "heading": "October to March is the easiest season",
+        "body": "These months bring comfortable weather, clearer drives, and the widest range of stay options. It is the safest recommendation for first-time travellers."
+      },
+      {
+        "heading": "June to September is for monsoon atmosphere",
+        "body": "The landscape is deeply green and cinematic. Plans should stay flexible because rain can reshape sightseeing."
+      },
+      {
+        "heading": "April and May need slower pacing",
+        "body": "Hill stations remain attractive, while coastal and backwater regions can feel warmer during the day."
+      }
+    ]
+  },
+  {
+    "title": "5 Days in Kerala: A First-Time Traveller’s Guide",
+    "slug": "5-days-in-kerala-first-time-travellers-guide",
+    "excerpt": "A practical first Kerala route that balances Munnar, Alleppey, and Kochi without rushing.",
+    "category": "Itinerary",
+    "coverImage": "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1400&q=85",
+    "publishedDate": "2026-01-15",
+    "readTime": "6 min read",
+    "author": "TripPort Planning Team",
+    "seo": {
+      "title": "5 Days in Kerala Guide | TripPort Blog",
+      "description": "A practical 5-day Kerala itinerary for first-time travellers across Munnar, Alleppey, and Kochi."
+    },
+    "content": [
+      {
+        "heading": "Keep the route simple",
+        "body": "For five days, Munnar and Alleppey create a strong contrast without demanding too many hotel changes."
+      },
+      {
+        "heading": "Protect one slow day",
+        "body": "A Kerala plan works better when one day is deliberately light, especially after hill drives."
+      }
+    ]
+  },
+  {
+    "title": "Munnar Travel Guide",
+    "slug": "munnar-travel-guide",
+    "excerpt": "How to plan Munnar for tea gardens, viewpoints, cafe stops, and calmer resort time.",
+    "category": "Destination",
+    "coverImage": "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1400&q=85",
+    "publishedDate": "2026-01-22",
+    "readTime": "5 min read",
+    "author": "TripPort Planning Team",
+    "seo": {
+      "title": "Munnar Travel Guide | TripPort Blog",
+      "description": "A warm, practical Munnar travel guide for tea estates, viewpoints, stays, and trip pacing."
+    },
+    "content": [
+      {
+        "heading": "Choose stay location carefully",
+        "body": "A good Munnar experience often depends on where you stay relative to viewpoints and drive routes."
+      },
+      {
+        "heading": "Plan around mist and traffic",
+        "body": "Start early for viewpoints and keep afternoons lighter for cafes, tea estates, or resort time."
+      }
+    ]
+  },
+  {
+    "title": "Alleppey Houseboat Guide",
+    "slug": "alleppey-houseboat-guide",
+    "excerpt": "What to know before choosing a houseboat, backwater resort, or day cruise in Alleppey.",
+    "category": "Backwaters",
+    "coverImage": "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1400&q=85",
+    "publishedDate": "2026-01-29",
+    "readTime": "4 min read",
+    "author": "TripPort Planning Team",
+    "seo": {
+      "title": "Alleppey Houseboat Guide | TripPort Blog",
+      "description": "A practical guide to choosing Alleppey houseboats, backwater resorts, and private cruises."
+    },
+    "content": [
+      {
+        "heading": "Houseboat or resort",
+        "body": "Houseboats feel iconic, while waterfront resorts can be more comfortable for travellers who prefer space and facilities."
+      },
+      {
+        "heading": "Ask about route and meals",
+        "body": "The quality of the route, crew, and food matters more than the boat label alone."
+      }
+    ]
+  },
+  {
+    "title": "South India Honeymoon Planning Guide",
+    "slug": "south-india-honeymoon-planning-guide",
+    "excerpt": "How to choose between Kerala, Coorg, Ooty, and custom South India honeymoon routes.",
+    "category": "Honeymoon",
+    "coverImage": "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1400&q=85",
+    "publishedDate": "2026-02-05",
+    "readTime": "7 min read",
+    "author": "TripPort Planning Team",
+    "seo": {
+      "title": "South India Honeymoon Planning Guide | TripPort Blog",
+      "description": "A practical South India honeymoon planning guide for Kerala, Coorg, Ooty, and custom routes."
+    },
+    "content": [
+      {
+        "heading": "Choose mood before destination",
+        "body": "Backwaters, hills, plantation stays, and heritage cities each create a different honeymoon rhythm."
+      },
+      {
+        "heading": "Avoid too many transfers",
+        "body": "A memorable honeymoon usually needs fewer hotel changes and more unstructured time."
+      }
+    ]
+  }
+]

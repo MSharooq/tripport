@@ -1,0 +1,467 @@
+[
+  {
+    "id": "kerala-honeymoon",
+    "slug": "kerala-honeymoon-journey",
+    "title": "Kerala Honeymoon Journey",
+    "destination": "Munnar, Thekkady, Alleppey, Kochi",
+    "region": "Kerala",
+    "duration": "6 nights / 7 days",
+    "category": "Honeymoon",
+    "priceLabel": "Custom quote",
+    "shortDescription": "A gentle honeymoon route through tea hills, spice country, and a private backwater stay.",
+    "overview": "Designed for couples who want premium stays, scenic transfers, and a slower Kerala rhythm without overpacked days.",
+    "highlights": [
+      "Tea garden viewpoints",
+      "Private backwater cruise",
+      "Handpicked romantic stays",
+      "Kochi heritage walk"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Arrive in Kochi",
+        "description": "Airport pickup, relaxed check-in, and optional Fort Kochi evening."
+      },
+      {
+        "day": "Day 2",
+        "title": "Drive to Munnar",
+        "description": "Scenic hill drive with tea estates, viewpoints, and a calm resort evening."
+      },
+      {
+        "day": "Day 3",
+        "title": "Munnar at leisure",
+        "description": "Tea museum, soft trekking options, and private cafe recommendations."
+      },
+      {
+        "day": "Day 4",
+        "title": "Thekkady spice country",
+        "description": "Forest-fringe drive, spice garden visit, and optional boat safari."
+      },
+      {
+        "day": "Day 5",
+        "title": "Alleppey backwaters",
+        "description": "Board a private houseboat or waterfront stay with curated meal plan."
+      },
+      {
+        "day": "Day 6",
+        "title": "Kochi return",
+        "description": "Return to Kochi for heritage streets, galleries, and a farewell dinner."
+      }
+    ],
+    "inclusions": [
+      "Private transfers",
+      "Curated stays",
+      "Daily breakfast",
+      "Planning support",
+      "Houseboat or backwater stay"
+    ],
+    "exclusions": [
+      "Flights",
+      "Lunch and dinner unless specified",
+      "Entry tickets",
+      "Personal expenses"
+    ],
+    "bestTime": "October to March for crisp weather; June to September for monsoon atmosphere.",
+    "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1400&q=85",
+    "video": "",
+    "tags": [
+      "Couples",
+      "Backwaters",
+      "Premium stays"
+    ],
+    "idealFor": [
+      "Honeymooners",
+      "Anniversary trips"
+    ],
+    "ctaLabel": "Enquire for this package",
+    "seo": {
+      "title": "Kerala Honeymoon Journey | TripPort",
+      "description": "A curated Kerala honeymoon package across Munnar, Thekkady, Alleppey, and Kochi."
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1400&q=85"
+    ]
+  },
+  {
+    "id": "munnar-alleppey",
+    "slug": "munnar-alleppey-escape",
+    "title": "Munnar & Alleppey Escape",
+    "destination": "Munnar and Alleppey",
+    "region": "Kerala",
+    "duration": "4 nights / 5 days",
+    "category": "Short escape",
+    "priceLabel": "Custom quote",
+    "shortDescription": "A compact Kerala route pairing misty tea hills with calm backwater days.",
+    "overview": "A practical first-time Kerala plan for travellers who want the strongest hill-and-water contrast in five days.",
+    "highlights": [
+      "Munnar tea estates",
+      "Mattupetty viewpoints",
+      "Backwater cruise",
+      "Private transfers"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Kochi to Munnar",
+        "description": "Arrival pickup and drive into the Western Ghats."
+      },
+      {
+        "day": "Day 2",
+        "title": "Munnar highlights",
+        "description": "Tea country, viewpoints, and flexible local experiences."
+      },
+      {
+        "day": "Day 3",
+        "title": "Munnar leisure",
+        "description": "Choose a soft trek, cafe trail, or quiet resort day."
+      },
+      {
+        "day": "Day 4",
+        "title": "Alleppey",
+        "description": "Backwater stay or houseboat experience with local meals."
+      },
+      {
+        "day": "Day 5",
+        "title": "Departure",
+        "description": "Transfer to Kochi with optional short stops."
+      }
+    ],
+    "inclusions": [
+      "Private transfers",
+      "Curated accommodation",
+      "Daily breakfast",
+      "Route planning"
+    ],
+    "exclusions": [
+      "Flights",
+      "Meals not mentioned",
+      "Entry tickets",
+      "Personal expenses"
+    ],
+    "bestTime": "September to March for comfortable travel; monsoon for lush scenery.",
+    "image": "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1400&q=85",
+    "video": "",
+    "tags": [
+      "First-time Kerala",
+      "Hills",
+      "Backwaters"
+    ],
+    "idealFor": [
+      "Couples",
+      "Families",
+      "First-time travellers"
+    ],
+    "ctaLabel": "Plan this escape",
+    "seo": {
+      "title": "Munnar & Alleppey Escape | TripPort",
+      "description": "A curated 5-day Kerala route through Munnar hills and Alleppey backwaters."
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1400&q=85"
+    ]
+  },
+  {
+    "id": "wayanad-nature",
+    "slug": "wayanad-nature-retreat",
+    "title": "Wayanad Nature Retreat",
+    "destination": "Wayanad",
+    "region": "Kerala",
+    "duration": "3 nights / 4 days",
+    "category": "Nature",
+    "priceLabel": "Custom quote",
+    "shortDescription": "A forest-fringe retreat with waterfalls, plantations, and quiet boutique stays.",
+    "overview": "Best for travellers who want fresh air, slow mornings, scenic drives, and a stay-led nature experience.",
+    "highlights": [
+      "Waterfalls",
+      "Plantation stays",
+      "Cave visit options",
+      "Soft nature walks"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Arrive in Wayanad",
+        "description": "Check in to a nature stay and settle into the hills."
+      },
+      {
+        "day": "Day 2",
+        "title": "Waterfalls and plantations",
+        "description": "Flexible day shaped around weather and your comfort."
+      },
+      {
+        "day": "Day 3",
+        "title": "Local experiences",
+        "description": "Choose viewpoints, caves, or a quieter resort-led day."
+      },
+      {
+        "day": "Day 4",
+        "title": "Departure",
+        "description": "Breakfast and onward transfer."
+      }
+    ],
+    "inclusions": [
+      "Private cab",
+      "Curated stay",
+      "Breakfast",
+      "Planning support"
+    ],
+    "exclusions": [
+      "Flights",
+      "Entry tickets",
+      "Meals not listed",
+      "Personal expenses"
+    ],
+    "bestTime": "October to May; monsoon is beautiful with flexible planning.",
+    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1400&q=85",
+    "video": "",
+    "tags": [
+      "Nature",
+      "Plantations",
+      "Slow travel"
+    ],
+    "idealFor": [
+      "Couples",
+      "Families",
+      "Remote-work breaks"
+    ],
+    "ctaLabel": "Enquire for Wayanad",
+    "seo": {
+      "title": "Wayanad Nature Retreat | TripPort",
+      "description": "A curated Wayanad nature retreat with plantation stays, waterfalls, and quiet hill days."
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1400&q=85"
+    ]
+  },
+  {
+    "id": "coorg-weekend",
+    "slug": "coorg-weekend-journey",
+    "title": "Coorg Weekend Journey",
+    "destination": "Coorg",
+    "region": "Karnataka",
+    "duration": "2 nights / 3 days",
+    "category": "Weekend",
+    "priceLabel": "Custom quote",
+    "shortDescription": "A polished coffee-country weekend with scenic stays and relaxed local touring.",
+    "overview": "A clean weekend plan for travellers from Bengaluru or Mysuru who want Coorg without logistical clutter.",
+    "highlights": [
+      "Coffee estate stay",
+      "Abbey Falls",
+      "Madikeri viewpoints",
+      "Local food recommendations"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Drive to Coorg",
+        "description": "Pickup and check-in at a coffee-country stay."
+      },
+      {
+        "day": "Day 2",
+        "title": "Coorg highlights",
+        "description": "Waterfalls, viewpoints, and estate time at a calm pace."
+      },
+      {
+        "day": "Day 3",
+        "title": "Return drive",
+        "description": "Breakfast and departure with optional stops."
+      }
+    ],
+    "inclusions": [
+      "Private transfers",
+      "Curated stay",
+      "Breakfast",
+      "Planning support"
+    ],
+    "exclusions": [
+      "Flights",
+      "Entry tickets",
+      "Meals not mentioned",
+      "Personal expenses"
+    ],
+    "bestTime": "October to March for pleasant weather; July to September for a greener landscape.",
+    "image": "https://images.unsplash.com/photo-1623955275793-79d5b935f2d4?auto=format&fit=crop&w=1400&q=85",
+    "video": "",
+    "tags": [
+      "Coffee estates",
+      "Weekend",
+      "Karnataka"
+    ],
+    "idealFor": [
+      "Couples",
+      "Friends",
+      "Families"
+    ],
+    "ctaLabel": "Plan Coorg",
+    "seo": {
+      "title": "Coorg Weekend Journey | TripPort",
+      "description": "A curated Coorg weekend journey with coffee estate stays and private transfers."
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1623955275793-79d5b935f2d4?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1400&q=85"
+    ]
+  },
+  {
+    "id": "ooty-kodaikanal",
+    "slug": "ooty-kodaikanal-hills",
+    "title": "Ooty & Kodaikanal Hills",
+    "destination": "Ooty and Kodaikanal",
+    "region": "Tamil Nadu",
+    "duration": "5 nights / 6 days",
+    "category": "Hill stations",
+    "priceLabel": "Custom quote",
+    "shortDescription": "A classic hill-station pairing shaped with better stays, cleaner pacing, and scenic drives.",
+    "overview": "For travellers who want the nostalgia of Tamil Nadu hill stations with a more refined TripPort route plan.",
+    "highlights": [
+      "Nilgiri views",
+      "Lake walks",
+      "Botanical gardens",
+      "Kodaikanal viewpoints"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Arrive in Ooty",
+        "description": "Transfer to Ooty and settle into the Nilgiris."
+      },
+      {
+        "day": "Day 2",
+        "title": "Ooty highlights",
+        "description": "Gardens, viewpoints, and cafe-led leisure time."
+      },
+      {
+        "day": "Day 3",
+        "title": "Coonoor day",
+        "description": "Tea estates, viewpoints, and a softer scenic circuit."
+      },
+      {
+        "day": "Day 4",
+        "title": "Drive to Kodaikanal",
+        "description": "Scenic transfer with a relaxed arrival."
+      },
+      {
+        "day": "Day 5",
+        "title": "Kodaikanal",
+        "description": "Lake, viewpoints, and local food recommendations."
+      },
+      {
+        "day": "Day 6",
+        "title": "Departure",
+        "description": "Breakfast and onward transfer."
+      }
+    ],
+    "inclusions": [
+      "Private transfers",
+      "Curated stays",
+      "Breakfast",
+      "Route planning"
+    ],
+    "exclusions": [
+      "Flights",
+      "Entry tickets",
+      "Meals not listed",
+      "Personal expenses"
+    ],
+    "bestTime": "October to June, with cooler evenings in winter.",
+    "image": "https://images.unsplash.com/photo-1626014303757-6366ef55c4ab?auto=format&fit=crop&w=1400&q=85",
+    "video": "",
+    "tags": [
+      "Hill stations",
+      "Tamil Nadu",
+      "Scenic drives"
+    ],
+    "idealFor": [
+      "Families",
+      "Couples",
+      "Leisure travellers"
+    ],
+    "ctaLabel": "Enquire for hills",
+    "seo": {
+      "title": "Ooty & Kodaikanal Hills | TripPort",
+      "description": "A curated Ooty and Kodaikanal hill-station journey with private transfers and premium pacing."
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1626014303757-6366ef55c4ab?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1400&q=85"
+    ]
+  },
+  {
+    "id": "south-india-custom",
+    "slug": "south-india-custom-journey",
+    "title": "South India Custom Journey",
+    "destination": "Kerala, Karnataka, Tamil Nadu",
+    "region": "South India",
+    "duration": "Flexible",
+    "category": "Custom",
+    "priceLabel": "Built around your brief",
+    "shortDescription": "A custom TripPort route for travellers who want a South India plan shaped from scratch.",
+    "overview": "Share your travel month, interests, and pace. We create a route across South India with clean logistics and curated stays.",
+    "highlights": [
+      "Custom routing",
+      "Stay curation",
+      "Private transfers",
+      "Flexible pace"
+    ],
+    "itinerary": [
+      {
+        "day": "Step 1",
+        "title": "Share your brief",
+        "description": "Tell us destinations, dates, travellers, and preferred travel style."
+      },
+      {
+        "day": "Step 2",
+        "title": "Route design",
+        "description": "We suggest a clean route with drive times, stays, and experience options."
+      },
+      {
+        "day": "Step 3",
+        "title": "Refinement",
+        "description": "Your plan is adjusted for pace, budget, and specific interests."
+      }
+    ],
+    "inclusions": [
+      "Route planning",
+      "Stay recommendations",
+      "Private transfer planning",
+      "Experience suggestions"
+    ],
+    "exclusions": [
+      "Flights",
+      "Confirmed bookings until quoted",
+      "Entry tickets",
+      "Personal expenses"
+    ],
+    "bestTime": "Depends on your route. Kerala and Karnataka are strongest from October to March.",
+    "image": "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1400&q=85",
+    "video": "",
+    "tags": [
+      "Custom",
+      "Flexible",
+      "South India"
+    ],
+    "idealFor": [
+      "Families",
+      "Couples",
+      "Small groups"
+    ],
+    "ctaLabel": "Build my journey",
+    "seo": {
+      "title": "South India Custom Journey | TripPort",
+      "description": "A custom South India travel plan shaped around your dates, pace, and interests."
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1623955275793-79d5b935f2d4?auto=format&fit=crop&w=1400&q=85"
+    ]
+  }
+]

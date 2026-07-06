@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Ananya R.",
+    "location": "Bengaluru",
+    "trip": "Munnar & Alleppey Escape",
+    "rating": 5,
+    "quote": "Placeholder review: the route felt calm, the stays were thoughtfully chosen, and the pacing worked beautifully for our first Kerala trip.",
+    "image": "",
+    "date": "Replace with real guest date"
+  },
+  {
+    "name": "Rahul M.",
+    "location": "Mumbai",
+    "trip": "Kerala Honeymoon Journey",
+    "rating": 5,
+    "quote": "Placeholder review: TripPort’s planning style felt personal without becoming complicated. The backwater day was the highlight.",
+    "image": "",
+    "date": "Replace with real guest date"
+  },
+  {
+    "name": "Meera S.",
+    "location": "Hyderabad",
+    "trip": "Wayanad Nature Retreat",
+    "rating": 5,
+    "quote": "Placeholder review: clean recommendations, practical drive planning, and a nature stay that matched the mood we wanted.",
+    "image": "",
+    "date": "Replace with real guest date"
+  },
+  {
+    "name": "Nikhil P.",
+    "location": "Chennai",
+    "trip": "Coorg Weekend Journey",
+    "rating": 5,
+    "quote": "Placeholder review: the weekend was easy to understand, easy to travel, and still felt premium.",
+    "image": "",
+    "date": "Replace with real guest date"
+  }
+]

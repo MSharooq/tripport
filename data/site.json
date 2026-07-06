@@ -1,0 +1,179 @@
+{
+  "brand": {
+    "name": "TripPort",
+    "tagline": "Curates Memorable Experiences",
+    "description": "Curated South India travel packages planned with local expertise, personal pace, and thoughtful detail.",
+    "whatsappNumber": "919876543210",
+    "email": "hello@tripport.in",
+    "phone": "+91 98765 43210",
+    "address": "Kochi, Kerala"
+  },
+  "seo": {
+    "title": "TripPort | Curated South India Travel Packages",
+    "description": "Premium South India journeys across Kerala, Karnataka, Tamil Nadu, hill stations, backwaters, and nature retreats.",
+    "ogImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1600&q=80"
+  },
+  "hero": {
+    "slides": [
+      {
+        "title": "Kerala journeys planned at your personal pace",
+        "subtitle": "Private routes through misty hills, quiet backwaters, and handpicked stays with TripPort’s local planning team.",
+        "location": "Kerala",
+        "category": "Honeymoon & slow travel",
+        "video": "",
+        "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1800&q=85",
+        "ctaLabel": "View curated packages",
+        "ctaLink": "#packages"
+      },
+      {
+        "title": "Western Ghats retreats with room to breathe",
+        "subtitle": "Munnar, Wayanad, Coorg, Ooty, and Kodaikanal combined into clean, scenic journeys without rushed checklists.",
+        "location": "Western Ghats",
+        "category": "Nature retreats",
+        "video": "",
+        "image": "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1800&q=85",
+        "ctaLabel": "Explore destinations",
+        "ctaLink": "#destinations"
+      },
+      {
+        "title": "Backwaters, houseboats, and softer days",
+        "subtitle": "A thoughtfully planned Alleppey experience with private transfers, trusted stays, and relaxed local recommendations.",
+        "location": "Alleppey",
+        "category": "Backwaters",
+        "video": "",
+        "image": "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1800&q=85",
+        "ctaLabel": "Plan an enquiry",
+        "ctaLink": "#enquiry"
+      }
+    ]
+  },
+  "sections": {
+    "featuredPackages": {
+      "eyebrow": "Curated packages",
+      "title": "South India journeys with clean routes and thoughtful stays",
+      "description": "Image-led packages built for discovery first. We refine each route around your dates, pace, and travel style.",
+      "ctaLabel": "See all packages",
+      "ctaLink": "/packages"
+    },
+    "destinations": {
+      "eyebrow": "Popular destinations",
+      "title": "Places TripPort plans often, and plans well",
+      "description": "From backwaters to hill stations, these are the South India regions guests ask us to shape with care.",
+      "ctaLabel": "Browse destinations",
+      "ctaLink": "/destinations"
+    },
+    "travelGuides": {
+      "eyebrow": "Travel guides",
+      "title": "Practical destination notes before you decide",
+      "description": "Clear guidance on best time, ideal duration, highlights, and simple planning tips.",
+      "ctaLabel": "Read guides",
+      "ctaLink": "/travel-guides"
+    },
+    "blogs": {
+      "eyebrow": "Journal",
+      "title": "Planning ideas for South India trips",
+      "description": "Warm, direct travel notes for couples, families, and first-time South India travellers.",
+      "ctaLabel": "Read the blog",
+      "ctaLink": "/blog"
+    },
+    "testimonials": {
+      "eyebrow": "Guest notes",
+      "title": "Early traveller feedback placeholders",
+      "description": "Generic sample reviews for layout and tone. Replace them with verified guest stories when available."
+    },
+    "whyTripPort": {
+      "eyebrow": "Why TripPort",
+      "title": "Planning that feels personal without becoming complicated",
+      "description": "V1 is focused on trust, discovery, and enquiries. Every detail supports a conversation with a real planning team.",
+      "items": [
+        {
+          "title": "Local route sense",
+          "description": "We shape routes around drive time, weather, stay quality, and the actual rhythm of South India."
+        },
+        {
+          "title": "Curated, not crowded",
+          "description": "Packages are starting points with enough structure to trust and enough flexibility to personalize."
+        },
+        {
+          "title": "Clear enquiry flow",
+          "description": "No payment pressure or booking engine in V1. Share your plan and we help refine it."
+        }
+      ]
+    },
+    "finalCta": {
+      "eyebrow": "Start with a simple enquiry",
+      "title": "Tell us the kind of South India journey you want",
+      "description": "Share your destination interest, month, and group size. TripPort will respond with a thoughtful first plan.",
+      "primaryLabel": "Send enquiry",
+      "primaryLink": "/contact",
+      "secondaryLabel": "WhatsApp TripPort",
+      "secondaryLink": "https://wa.me/919876543210"
+    },
+    "contact": {
+      "eyebrow": "Enquiry",
+      "title": "Plan a curated South India journey",
+      "description": "This static V1 form is ready for a future backend or form service. For now, WhatsApp is the fastest CTA.",
+      "submitLabel": "Prepare enquiry",
+      "whatsappLabel": "Continue on WhatsApp"
+    }
+  },
+  "pages": {
+    "packages": {
+      "eyebrow": "Packages",
+      "title": "Curated South India packages",
+      "description": "Every package is a discovery-led starting point. TripPort refines the final plan around your dates, budget, and pace."
+    },
+    "packageDetail": {
+      "overview": "Overview",
+      "highlights": "Highlights",
+      "itinerary": "Suggested itinerary",
+      "inclusions": "Inclusions",
+      "exclusions": "Exclusions",
+      "bestTime": "Best time to visit",
+      "idealFor": "Ideal for",
+      "tags": "Trip style",
+      "enquiryTitle": "Interested in this journey?",
+      "enquiryDescription": "Share your month, group size, and preferred pace. TripPort will shape this package into a tailored enquiry plan.",
+      "enquiryLabel": "Enquire now"
+    },
+    "blog": {
+      "eyebrow": "Journal",
+      "title": "South India planning notes",
+      "description": "Readable guidance for travellers choosing routes, seasons, stays, and destination combinations."
+    },
+    "travelGuides": {
+      "eyebrow": "Travel guides",
+      "title": "Destination guides for practical planning",
+      "description": "Best time, ideal duration, highlights, tips, and FAQs for the places TripPort plans most often.",
+      "bestTime": "Best time",
+      "idealDuration": "Ideal duration",
+      "highlights": "Highlights",
+      "tips": "Planning tips",
+      "faqs": "FAQs"
+    },
+    "destinations": {
+      "eyebrow": "Destinations",
+      "title": "South India places to plan with TripPort",
+      "description": "A focused destination set for premium, warm, and practical South India travel planning."
+    },
+    "about": {
+      "eyebrow": "About TripPort",
+      "title": "A premium travel brand for curated South India journeys",
+      "description": "TripPort is built for travellers who want clarity, good taste, local context, and memorable experiences without turning planning into a booking engine.",
+      "cards": [
+        {
+          "title": "Experience-led",
+          "description": "We start with the feeling of the trip, then shape destinations, stays, and movement around it."
+        },
+        {
+          "title": "South India focused",
+          "description": "Kerala, Karnataka, and Tamil Nadu receive the attention and nuance they deserve."
+        },
+        {
+          "title": "Enquiry first",
+          "description": "V1 is intentionally designed for thoughtful conversations, not rushed checkout flows."
+        }
+      ]
+    }
+  }
+}

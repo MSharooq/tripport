@@ -1,0 +1,116 @@
+[
+  {
+    "title": "Kerala Travel Guide",
+    "slug": "kerala-travel-guide",
+    "destination": "Kerala",
+    "excerpt": "A practical overview for planning Kerala across hills, backwaters, heritage towns, and coast.",
+    "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1400&q=85",
+    "bestTime": "October to March",
+    "idealDuration": "5 to 8 days",
+    "highlights": ["Munnar", "Alleppey", "Kochi", "Thekkady"],
+    "tips": ["Keep hill drives light on arrival day.", "Choose between houseboat and backwater resort based on comfort.", "Book premium stays early for winter dates."],
+    "faqs": [
+      { "question": "Is Kerala good for first-time South India travel?", "answer": "Yes. It offers a balanced mix of hills, backwaters, heritage, food, and softer road logistics." },
+      { "question": "How many days are enough?", "answer": "Five days works for a compact route; seven or eight days allows a calmer pace." }
+    ],
+    "seo": {
+      "title": "Kerala Travel Guide | TripPort",
+      "description": "A practical Kerala travel guide with best time, ideal duration, highlights, tips, and FAQs."
+    }
+  },
+  {
+    "title": "Munnar Travel Guide",
+    "slug": "munnar-travel-guide",
+    "destination": "Munnar",
+    "excerpt": "Tea gardens, viewpoints, and cooler hill-station days planned with realistic pacing.",
+    "image": "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1400&q=85",
+    "bestTime": "September to March",
+    "idealDuration": "2 to 3 nights",
+    "highlights": ["Tea estates", "Mattupetty", "Viewpoints", "Cafe stops"],
+    "tips": ["Start sightseeing early.", "Keep one slow afternoon.", "Check drive time before adding Thekkady or Alleppey."],
+    "faqs": [
+      { "question": "Is Munnar suitable for honeymoon trips?", "answer": "Yes. It works well with premium hill stays and a slow itinerary." },
+      { "question": "Can Munnar be done in two nights?", "answer": "Yes, but three nights feels calmer for travellers who want resort time." }
+    ],
+    "seo": {
+      "title": "Munnar Travel Guide | TripPort",
+      "description": "A Munnar travel guide covering best time, ideal duration, highlights, tips, and FAQs."
+    }
+  },
+  {
+    "title": "Wayanad Travel Guide",
+    "slug": "wayanad-travel-guide",
+    "destination": "Wayanad",
+    "excerpt": "A forest-fringe Kerala guide for waterfalls, plantations, and nature stays.",
+    "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1400&q=85",
+    "bestTime": "October to May",
+    "idealDuration": "3 to 4 days",
+    "highlights": ["Plantation stays", "Waterfalls", "Caves", "Viewpoints"],
+    "tips": ["Stay location matters because sightseeing is spread out.", "Monsoon plans need flexibility.", "Choose a stay with strong in-house dining."],
+    "faqs": [
+      { "question": "Is Wayanad better than Munnar?", "answer": "They serve different moods. Wayanad is more forested and stay-led; Munnar is more tea-estate focused." },
+      { "question": "Is Wayanad family friendly?", "answer": "Yes, especially with a comfortable resort and moderate sightseeing." }
+    ],
+    "seo": {
+      "title": "Wayanad Travel Guide | TripPort",
+      "description": "A practical Wayanad guide with best time, ideal duration, tips, highlights, and FAQs."
+    }
+  },
+  {
+    "title": "Coorg Travel Guide",
+    "slug": "coorg-travel-guide",
+    "destination": "Coorg",
+    "excerpt": "Coffee estates, green valleys, and weekend pacing for Karnataka travellers.",
+    "image": "https://images.unsplash.com/photo-1623955275793-79d5b935f2d4?auto=format&fit=crop&w=1400&q=85",
+    "bestTime": "October to March",
+    "idealDuration": "2 to 3 nights",
+    "highlights": ["Coffee estates", "Abbey Falls", "Madikeri", "Viewpoints"],
+    "tips": ["Avoid packing too many sightseeing points into a weekend.", "Estate stays define the experience.", "Start early from Bengaluru for a smoother arrival."],
+    "faqs": [
+      { "question": "Is Coorg good for a weekend?", "answer": "Yes, especially from Bengaluru or Mysuru with private transfers." },
+      { "question": "What kind of stays work best?", "answer": "Coffee estate stays or boutique hill properties usually fit the destination best." }
+    ],
+    "seo": {
+      "title": "Coorg Travel Guide | TripPort",
+      "description": "A Coorg travel guide for coffee estates, best time, ideal duration, tips, and FAQs."
+    }
+  },
+  {
+    "title": "Ooty Travel Guide",
+    "slug": "ooty-travel-guide",
+    "destination": "Ooty",
+    "excerpt": "Nilgiri views, heritage charm, and a calmer way to plan a classic hill station.",
+    "image": "https://images.unsplash.com/photo-1626014303757-6366ef55c4ab?auto=format&fit=crop&w=1400&q=85",
+    "bestTime": "October to June",
+    "idealDuration": "2 to 4 days",
+    "highlights": ["Coonoor", "Botanical gardens", "Tea estates", "Lake walks"],
+    "tips": ["Pair Ooty with Coonoor for a stronger route.", "Avoid peak-hour town traffic where possible.", "Choose stays for views and access."],
+    "faqs": [
+      { "question": "Can Ooty and Kodaikanal be combined?", "answer": "Yes, but the route needs careful pacing because transfers are longer than they look." },
+      { "question": "Is Ooty still worth visiting?", "answer": "Yes, when the stay and route are chosen thoughtfully." }
+    ],
+    "seo": {
+      "title": "Ooty Travel Guide | TripPort",
+      "description": "An Ooty travel guide with best time, ideal duration, highlights, tips, and FAQs."
+    }
+  },
+  {
+    "title": "Alleppey Travel Guide",
+    "slug": "alleppey-travel-guide",
+    "destination": "Alleppey",
+    "excerpt": "Backwater stays, houseboats, and quiet water-side planning without confusion.",
+    "image": "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1400&q=85",
+    "bestTime": "October to March",
+    "idealDuration": "1 to 2 nights",
+    "highlights": ["Houseboats", "Backwater resorts", "Village canals", "Local meals"],
+    "tips": ["Decide between overnight houseboat and resort comfort.", "Confirm meal style and route.", "Keep arrival timing realistic after hill drives."],
+    "faqs": [
+      { "question": "Is one night enough in Alleppey?", "answer": "Yes for a houseboat experience. Two nights work better for a quieter resort-led stay." },
+      { "question": "Should I choose Kumarakom or Alleppey?", "answer": "Alleppey is iconic for houseboats; Kumarakom can feel quieter and more resort-led." }
+    ],
+    "seo": {
+      "title": "Alleppey Travel Guide | TripPort",
+      "description": "An Alleppey travel guide for houseboats, backwater stays, best time, tips, and FAQs."
+    }
+  }
+]
