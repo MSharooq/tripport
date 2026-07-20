@@ -1,9 +1,12 @@
 <script setup lang="ts">
+import { getWhatsAppLink } from '~/data/contact'
+
 const route = useRoute()
 const mobileOpen = ref(false)
 const { openEnquiry } = useEnquiry()
 
 const isHome = computed(() => route.path === '/')
+const whatsappLink = getWhatsAppLink('Hello Tripport, I would like to know more about your Kerala itineraries.')
 const navItems = [
   { label: 'Home', to: '/' },
   { label: 'Destinations', to: '/destinations' },
@@ -31,7 +34,7 @@ function closeMobile() {
       </nav>
 
       <div class="header-actions">
-        <a class="header-whatsapp" href="https://wa.me/910000000000?text=Hello%20Tripport%2C%20I%20would%20like%20to%20know%20more%20about%20your%20Kerala%20itineraries." target="_blank" rel="noopener">WhatsApp</a>
+        <a class="header-whatsapp" :href="whatsappLink" target="_blank" rel="noopener">WhatsApp</a>
         <button class="button button--forest header-cta" type="button" @click="openEnquiry()">Enquire now</button>
         <button class="mobile-toggle" :class="{ 'mobile-toggle--open': mobileOpen }" type="button" :aria-expanded="mobileOpen" aria-controls="mobile-navigation" :aria-label="mobileOpen ? 'Close navigation' : 'Open navigation'" @click="mobileOpen = !mobileOpen">
           <MaterialIcon :name="mobileOpen ? 'close' : 'menu'" :size="24" />
@@ -44,7 +47,7 @@ function closeMobile() {
         <nav id="mobile-navigation" class="mobile-nav page-shell" aria-label="Mobile navigation">
           <NuxtLink v-for="item in navItems" :key="item.to" :to="item.to" @click="closeMobile"><span>{{ item.label }}</span><MaterialIcon name="arrow_forward" :size="18" /></NuxtLink>
           <div class="mobile-nav__footer">
-            <a href="https://wa.me/910000000000?text=Hello%20Tripport%2C%20I%20would%20like%20to%20know%20more%20about%20your%20Kerala%20itineraries." target="_blank" rel="noopener">WhatsApp us</a>
+            <a :href="whatsappLink" target="_blank" rel="noopener">WhatsApp us</a>
             <button class="button button--forest" type="button" @click="openEnquiry(); closeMobile()">Start an enquiry <MaterialIcon name="arrow_forward" :size="18" /></button>
           </div>
         </nav>

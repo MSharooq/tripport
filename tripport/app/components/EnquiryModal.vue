@@ -4,8 +4,14 @@ import { nextTick, onBeforeUnmount, ref, watch } from 'vue'
 const props = withDefaults(defineProps<{
   modelValue: boolean
   selectedItineraryTitle?: string
+  enquiryContext?: {
+    enquiryType?: 'package' | 'planning'
+    travelMonth?: string
+    travellers?: number
+  }
 }>(), {
   selectedItineraryTitle: '',
+  enquiryContext: () => ({}),
 })
 
 const emit = defineEmits<{
@@ -40,9 +46,23 @@ function submit() {
   submitted.value = true
 }
 
+function resetFormForEnquiry() {
+  form.value = {
+    name: '',
+    phone: '',
+    email: '',
+    travelMonth: props.enquiryContext?.travelMonth ?? '',
+    travellers: props.enquiryContext?.travellers ?? 2,
+    message: props.enquiryContext?.enquiryType === 'planning'
+      ? 'I would like help planning a South India journey.'
+      : '',
+  }
+}
+
 watch(() => props.modelValue, async (open) => {
   if (open) {
     submitted.value = false
+    resetFormForEnquiry()
     document.body.style.overflow = 'hidden'
     window.addEventListener('keydown', onKeydown)
     await nextTick()
@@ -99,7 +119,7 @@ onBeforeUnmount(() => {
                   Enquiring about <strong>{{ selectedItineraryTitle }}</strong>. Share a few details and our team will contact you.
                 </template>
                 <template v-else>
-                  Share a few details and our team will help shape the right Kerala itinerary.
+                  Share a few details and our team will help shape the right South India journey.
                 </template>
               </p>
             </header>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { itineraries, packageDuration, packageTypeLabel, standardCancellationPolicy, standardTerms } from '~/data/itineraries'
+import { getWhatsAppLink } from '~/data/contact'
 
 const route = useRoute()
 const itinerary = computed(() => itineraries.find(item => item.slug === route.params.slug && item.status === 'published'))
@@ -175,7 +176,7 @@ useSeoMeta({
         <h3>Interested in this journey?</h3>
         <p>Share your travel dates and group details. Our team will respond with the right next steps.</p>
         <button v-if="itinerary.contact.enquiryEnabled" class="button button--dark" type="button" @click="openEnquiry(itinerary.title)">{{ itinerary.contact.callToAction }}</button>
-        <a v-if="itinerary.contact.whatsappEnabled" :href="`https://wa.me/910000000000?text=Hello%20Tripport%2C%20I%20am%20interested%20in%20${encodeURIComponent(itinerary.title)}.`" target="_blank" rel="noopener">Chat on WhatsApp <MaterialIcon name="arrow_forward" :size="16" /></a>
+        <a v-if="itinerary.contact.whatsappEnabled" :href="getWhatsAppLink(`Hello Tripport, I am interested in ${itinerary.title}.`)" target="_blank" rel="noopener">Chat on WhatsApp <MaterialIcon name="arrow_forward" :size="16" /></a>
       </aside>
     </section>
 

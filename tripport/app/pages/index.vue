@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { destinations, itineraries, packageTypeLabel, type PackageType } from '~/data/itineraries'
+import { getWhatsAppLink } from '~/data/contact'
 
 useSeoMeta({
   title: 'Thoughtful Kerala Journeys',
@@ -9,14 +10,24 @@ useSeoMeta({
 const { openEnquiry } = useEnquiry()
 const selectedPackageType = ref<'All' | PackageType>('All')
 const quickItinerary = ref('')
+const quickEnquiryType = ref<'package' | 'planning'>('package')
+const quickTravelMonth = ref('')
+const quickTravellers = ref(2)
+const homeWhatsAppLink = getWhatsAppLink('Hello Tripport, I need help with a Kerala itinerary.')
 const packageTypeFilters = computed(() => ['All', ...new Set(itineraries.filter(item => item.status === 'published').map(item => item.packageType))] as Array<'All' | PackageType>)
+const publishedItineraries = computed(() => itineraries.filter((item) => item.status === 'published'))
 const visibleItineraries = computed(() => selectedPackageType.value === 'All'
-  ? itineraries.filter((item) => item.status === 'published').slice(0, 6)
-  : itineraries.filter((item) => item.status === 'published' && item.packageType === selectedPackageType.value).slice(0, 6))
+  ? publishedItineraries.value.slice(0, 6)
+  : publishedItineraries.value.filter((item) => item.packageType === selectedPackageType.value).slice(0, 6))
 
 function openQuickEnquiry() {
-  const itinerary = itineraries.find((item) => item.slug === quickItinerary.value)
-  openEnquiry(itinerary?.title ?? '')
+  const itinerary = publishedItineraries.value.find((item) => item.slug === quickItinerary.value)
+  openEnquiry({
+    itineraryTitle: itinerary?.title,
+    enquiryType: quickEnquiryType.value,
+    travelMonth: quickTravelMonth.value,
+    travellers: quickTravellers.value,
+  })
 }
 </script>
 
@@ -33,15 +44,18 @@ function openQuickEnquiry() {
         </div>
 
         <aside class="quick-enquiry" aria-label="Quick itinerary enquiry">
-          <div class="quick-enquiry__heading"><span class="eyebrow">Plan with Tripport</span><h2>Find the right Kerala route</h2></div>
-          <div class="quick-tabs"><span class="quick-tabs__active">Package enquiry</span><span>Trip planning</span></div>
+          <div class="quick-enquiry__heading"><span class="eyebrow">Plan with Tripport</span><h2>{{ quickEnquiryType === 'package' ? 'Find the right Kerala route' : 'Start planning your journey' }}</h2></div>
+          <div class="quick-tabs" aria-label="Enquiry type">
+            <button class="quick-tabs__button" :class="{ 'quick-tabs__button--active': quickEnquiryType === 'package' }" type="button" :aria-pressed="quickEnquiryType === 'package'" @click="quickEnquiryType = 'package'">Package enquiry</button>
+            <button class="quick-tabs__button" :class="{ 'quick-tabs__button--active': quickEnquiryType === 'planning' }" type="button" :aria-pressed="quickEnquiryType === 'planning'" @click="quickEnquiryType = 'planning'">Trip planning</button>
+          </div>
           <label class="quick-field">
-            <span>Itinerary</span>
-            <span class="quick-select"><select v-model="quickItinerary"><option value="">Choose a Kerala route</option><option v-for="item in itineraries" :key="item.slug" :value="item.slug">{{ item.title }}</option></select><MaterialIcon name="expand_more" :size="18" /></span>
+            <span>{{ quickEnquiryType === 'package' ? 'Itinerary' : 'Route (optional)' }}</span>
+            <span class="quick-select"><select v-model="quickItinerary" aria-label="Itinerary"><option value="">{{ quickEnquiryType === 'package' ? 'Choose a Kerala route' : 'Choose a route to begin with' }}</option><option v-for="item in publishedItineraries" :key="item.slug" :value="item.slug">{{ item.title }}</option></select><MaterialIcon name="expand_more" :size="18" /></span>
           </label>
-          <div class="quick-field-row"><label class="quick-field"><span>Travel month</span><input type="month" aria-label="Travel month"></label><label class="quick-field"><span>Travellers</span><span class="quick-select"><select aria-label="Travellers"><option>2 guests</option><option>4 guests</option><option>6 guests</option><option>Group of 8+</option></select><MaterialIcon name="expand_more" :size="18" /></span></label></div>
-          <button class="button button--dark quick-enquiry__button" type="button" @click="openQuickEnquiry">Start an enquiry</button>
-          <p>Prefer to chat? <a href="https://wa.me/910000000000?text=Hello%20Tripport%2C%20I%20need%20help%20with%20a%20Kerala%20itinerary." target="_blank" rel="noopener">WhatsApp us</a></p>
+          <div class="quick-field-row"><label class="quick-field"><span>Travel month</span><input v-model="quickTravelMonth" type="month" aria-label="Travel month"></label><label class="quick-field"><span>Travellers</span><span class="quick-select"><select v-model.number="quickTravellers" aria-label="Travellers"><option :value="2">2 guests</option><option :value="4">4 guests</option><option :value="6">6 guests</option><option :value="8">Group of 8+</option></select><MaterialIcon name="expand_more" :size="18" /></span></label></div>
+          <button class="button button--dark quick-enquiry__button" type="button" @click="openQuickEnquiry">{{ quickEnquiryType === 'package' ? 'Start an enquiry' : 'Plan my journey' }} <MaterialIcon name="arrow_forward" :size="18" /></button>
+          <p>Prefer to chat? <a :href="homeWhatsAppLink" target="_blank" rel="noopener">WhatsApp us</a></p>
         </aside>
       </div>
     </section>
@@ -117,6 +131,29 @@ function openQuickEnquiry() {
   justify-self: end;
   color: #676767;
   pointer-events: none;
+}
+
+.quick-tabs__button {
+  border: 0;
+  padding: 10px;
+  border-radius: 999px;
+  background: transparent;
+  color: #555;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.quick-tabs__button--active {
+  background: #fff;
+  color: #111;
+  box-shadow: 0 2px 9px rgb(0 0 0 / 10%);
+  font-weight: 700;
+}
+
+.quick-tabs__button:focus-visible {
+  outline: 2px solid var(--forest);
+  outline-offset: 2px;
 }
 </style>
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { isEnquiryOpen, selectedItinerary } = useEnquiry()
+const { isEnquiryOpen, selectedItinerary, enquiryContext } = useEnquiry()
 </script>
 
 <template>
@@ -7,6 +7,10 @@ const { isEnquiryOpen, selectedItinerary } = useEnquiry()
     <SiteHeader />
     <main><slot /></main>
     <SiteFooter />
-    <EnquiryModal v-model="isEnquiryOpen" :selected-itinerary-title="selectedItinerary" />
+    <EnquiryModal
+      v-model="isEnquiryOpen"
+      :selected-itinerary-title="selectedItinerary"
+      :enquiry-context="enquiryContext"
+    />
   </div>
 </template>

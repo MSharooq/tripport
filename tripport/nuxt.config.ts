@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   modules: ["nitro-cloudflare-dev"],
   devtools: { enabled: true },
-  compatibilityDate: '2024-04-03',
+  compatibilityDate: '2026-07-20',
 
   vite: {
     server: {
@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: "cloudflare_module",
+    preset: "cloudflare-module",
 
     cloudflare: {
       deployConfig: true,
