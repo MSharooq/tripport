@@ -84,7 +84,7 @@ function openQuickEnquiry() {
       <div class="intro-section__thumbs"><img src="/images/munnar.jpg" alt="Munnar tea plantations"><img src="/images/hero.jpg" alt="Kerala backwater houseboat"><img src="/images/thekkady.jpg" alt="Thekkady forest"></div>
       <div class="achievement-rule"><span class="section-chip">Our foundation</span></div>
       <div class="achievement-grid">
-        <div class="achievement"><strong>15+</strong><span>years in travel</span></div><div class="achievement achievement--muted"><strong>10</strong><span>launch itineraries</span></div><div class="achievement"><strong>Kochi</strong><span>our Kerala base</span></div><div class="achievement achievement--muted"><strong>Kerala</strong><span>our first love</span></div>
+        <div class="achievement"><strong>15+</strong><span>years in travel</span></div><div class="achievement achievement--muted"><strong>1000+</strong><span>Happy Customers</span></div><div class="achievement"><strong>Kochi</strong><span>our Kerala base</span></div><div class="achievement achievement--muted"><strong>Kerala</strong><span>our first love</span></div>
       </div>
     </section>
 
