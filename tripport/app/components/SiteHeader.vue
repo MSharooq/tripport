@@ -25,7 +25,7 @@ function closeMobile() {
   <header class="site-header" :class="{ 'site-header--home': isHome, 'site-header--mobile-open': mobileOpen }">
     <div class="site-header__inner page-shell">
       <NuxtLink class="brand" to="/" aria-label="Tripport home" @click="closeMobile">
-        <span class="brand__mark">T</span>
+        <span class="brand__mark"><img src="/images/tripport_logo.svg" alt=""></span>
         <span>Tripport</span>
       </NuxtLink>
 

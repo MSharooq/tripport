@@ -7,6 +7,7 @@
   },
   "scripts": {
     "build": "nuxt build",
+    "typecheck": "nuxi typecheck",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "npm run build && wrangler dev",
@@ -16,6 +17,8 @@
   "dependencies": {
     "@material-symbols/svg-400": "^0.45.8",
     "@nuxt/content": "^3.14.0",
+    "@supabase/supabase-js": "^2.110.7",
+    "browser-image-compression": "^2.0.2",
     "nuxt": "^4.4.8",
     "vue": "^3.5.35",
     "vue-router": "^5.1.0"
@@ -24,6 +27,7 @@
     "@types/node": "^26.1.1",
     "nitro-cloudflare-dev": "^0.2.2",
     "nitropack": "^2.13.4",
+    "vue-tsc": "^3.3.7",
     "wrangler": "^4.110.0"
   }
 }

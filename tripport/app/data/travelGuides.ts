@@ -1,3 +1,5 @@
+import type { ResponsiveImageVariants } from './images'
+
 export interface GuideQuickFact {
   label: string
   value: string
@@ -5,11 +7,16 @@ export interface GuideQuickFact {
 
 export interface TravelGuide {
   slug: string
+  status?: 'draft' | 'published' | 'archived'
   category: string
   title: string
   summary: string
   intro: string
   image: string
+  /** Responsive WebP sources for the cover, when it was uploaded in Manager. */
+  imageVariants?: ResponsiveImageVariants
+  imageWidth?: number
+  imageHeight?: number
   readTime: string
   quickLook: GuideQuickFact[]
   takeaways: string[]

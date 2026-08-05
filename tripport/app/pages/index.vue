@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import { destinations, itineraries, packageTypeLabel, type PackageType } from '~/data/itineraries'
+import { itineraries, packageTypeLabel, type PackageType } from '~/data/itineraries'
+import { destinations, type Destination } from '~/data/destinations'
+import { testimonials, type Testimonial } from '~/data/testimonials'
+import type { TripPackage } from '~/data/packages/types'
 import { getWhatsAppLink } from '~/data/contact'
 
 useSeoMeta({
@@ -8,17 +11,32 @@ useSeoMeta({
 })
 
 const { openEnquiry } = useEnquiry()
+const { data: managedPackages } = await useFetch<TripPackage[]>('/api/content/packages', {
+  default: () => itineraries,
+})
+const { data: managedDestinations } = await useFetch<Destination[]>('/api/content/destinations', {
+  default: () => destinations,
+})
+const { data: managedTestimonials } = await useFetch<Testimonial[]>('/api/content/testimonials', {
+  default: () => testimonials,
+})
 const selectedPackageType = ref<'All' | PackageType>('All')
 const quickItinerary = ref('')
 const quickEnquiryType = ref<'package' | 'planning'>('package')
 const quickTravelMonth = ref('')
 const quickTravellers = ref(2)
 const homeWhatsAppLink = getWhatsAppLink('Hello Tripport, I need help with a Kerala itinerary.')
-const packageTypeFilters = computed(() => ['All', ...new Set(itineraries.filter(item => item.status === 'published').map(item => item.packageType))] as Array<'All' | PackageType>)
-const publishedItineraries = computed(() => itineraries.filter((item) => item.status === 'published'))
+const packageTypeFilters = computed(() => ['All', ...new Set((managedPackages.value ?? itineraries).filter(item => item.status === 'published').map(item => item.packageType))] as Array<'All' | PackageType>)
+const publishedItineraries = computed(() => (managedPackages.value ?? itineraries).filter((item) => item.status === 'published'))
 const visibleItineraries = computed(() => selectedPackageType.value === 'All'
   ? publishedItineraries.value.slice(0, 6)
   : publishedItineraries.value.filter((item) => item.packageType === selectedPackageType.value).slice(0, 6))
+const visibleDestinations = computed(() => (managedDestinations.value ?? destinations).filter(item => item.status === 'published').slice(0, 8))
+const publishedTestimonials = computed(() => (managedTestimonials.value ?? testimonials).filter(item => item.status === 'published'))
+const featuredTestimonials = computed(() => {
+  const featured = publishedTestimonials.value.filter(item => item.featured)
+  return (featured.length ? featured : publishedTestimonials.value).slice(0, 3)
+})
 
 function openQuickEnquiry() {
   const itinerary = publishedItineraries.value.find((item) => item.slug === quickItinerary.value)
@@ -80,7 +98,7 @@ function openQuickEnquiry() {
     <section id="destinations" class="section section--dark">
       <div class="page-shell">
         <div class="section-heading section-heading--dark"><div><span class="eyebrow eyebrow--light">Across Kerala</span><h2>Places that make the itinerary.</h2></div><p>From misty tea country to the coast, explore the stops that define a Kerala journey.</p></div>
-        <div class="destination-grid"><DestinationCard v-for="destination in destinations.slice(0, 8)" :key="destination.slug" :destination="destination" /></div>
+        <div class="destination-grid"><DestinationCard v-for="destination in visibleDestinations" :key="destination.slug" :destination="destination" /></div>
         <div class="center-action"><NuxtLink class="button button--light" to="/destinations">Explore all destinations <MaterialIcon name="arrow_forward" :size="18" /></NuxtLink></div>
       </div>
     </section>
@@ -96,6 +114,11 @@ function openQuickEnquiry() {
         <NuxtLink class="guide-card guide-card--image" to="/travel-guides/best-time-to-visit-kerala"><img src="/images/munnar-wide.jpg" alt="Munnar green hills"><span>When to go</span><strong>Best time to visit Kerala</strong></NuxtLink>
         <NuxtLink class="guide-card" to="/travel-guides/kerala-route-guide"><span>Route planning</span><strong>How many days are enough for Kerala?</strong><i>Read guide <MaterialIcon name="arrow_forward" :size="16" /></i></NuxtLink>
       </div>
+    </section>
+
+    <section v-if="featuredTestimonials.length" class="section page-shell testimonial-section">
+      <div class="section-heading"><div><span class="eyebrow">Traveller stories</span><h2>Journeys remembered for the right reasons.</h2></div><p>Genuine feedback from people who have travelled with Tripport.</p></div>
+      <div class="testimonial-grid"><TestimonialCard v-for="testimonial in featuredTestimonials" :key="testimonial.id" :testimonial="testimonial" /></div>
     </section>
 
     <section class="section page-shell partner-section">
@@ -159,4 +182,11 @@ function openQuickEnquiry() {
 
 <style scoped>
 .hero-chip,.section-chip{font-size:12px}.home-hero__copy>p{font-size:17px}.home-hero__trust{font-size:14px}.quick-enquiry__heading h2{font-size:24px}.quick-tabs span{font-size:13px}.quick-field>span{font-size:10px}.quick-field select,.quick-field input{font-size:14px}.quick-enquiry>p{font-size:12px}.achievement-rule .section-chip{font-size:10px}.achievement span{font-size:13px}.why-section__copy>p,.guide-feature p,.partner-section>p{font-size:16px}.why-list span,.partner-section__items span{font-size:14px}.guide-card>span{font-size:12px}.guide-card i{font-size:14px}.route-note span,.route-note small{font-size:12px}
+</style>
+
+<style scoped>
+.testimonial-section .section-heading { margin-bottom: 34px; }
+.testimonial-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 900px) { .testimonial-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 620px) { .testimonial-grid { grid-template-columns: 1fr; } }
 </style>

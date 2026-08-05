@@ -4,6 +4,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   compatibilityDate: '2026-07-20',
 
+  runtimeConfig: {
+    public: {
+      supabaseUrl: '',
+      supabasePublishableKey: '',
+    },
+  },
+
   vite: {
     server: {
       allowedHosts: ['.ngrok-free.dev'],

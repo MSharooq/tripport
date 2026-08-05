@@ -1,9 +1,16 @@
 <script setup lang="ts">
 import { itineraries, packageDuration, packageTypeLabel, standardCancellationPolicy, standardTerms } from '~/data/itineraries'
 import { getWhatsAppLink } from '~/data/contact'
+import { responsiveImageSrc } from '~/data/images'
+import type { TripPackage } from '~/data/packages/types'
 
 const route = useRoute()
-const itinerary = computed(() => itineraries.find(item => item.slug === route.params.slug && item.status === 'published'))
+const slug = String(route.params.slug)
+const { data: managedItinerary } = await useFetch<TripPackage | null>(() => `/api/content/packages/${slug}`, {
+  default: () => itineraries.find(item => item.slug === slug && item.status === 'published') ?? null,
+})
+const { data: managedPackages } = await useFetch<TripPackage[]>('/api/content/packages', { default: () => itineraries })
+const itinerary = computed(() => managedItinerary.value ?? itineraries.find(item => item.slug === slug && item.status === 'published'))
 
 if (!itinerary.value) {
   throw createError({ statusCode: 404, statusMessage: 'Itinerary not found' })
@@ -21,7 +28,7 @@ const typeLabel = computed(() => itinerary.value ? packageTypeLabel(itinerary.va
 const cancellationPolicy = computed(() => [...standardCancellationPolicy, ...(itinerary.value?.cancellationExceptions ?? [])])
 const terms = computed(() => [...standardTerms, ...(itinerary.value?.additionalTerms ?? [])])
 const relatedItineraries = computed(() => itinerary.value
-  ? itineraries.filter(item => item.status === 'published' && item.slug !== itinerary.value!.slug).slice(0, 3)
+  ? (managedPackages.value ?? itineraries).filter(item => item.status === 'published' && item.slug !== itinerary.value!.slug).slice(0, 3)
   : [])
 
 watch(() => itinerary.value?.slug, () => {
@@ -70,7 +77,7 @@ useSeoMeta({
   description: () => itinerary.value?.seo.metaDescription ?? '',
   ogTitle: () => itinerary.value?.seo.metaTitle ?? 'Kerala itinerary',
   ogDescription: () => itinerary.value?.seo.metaDescription ?? '',
-  ogImage: () => itinerary.value?.images.cover.url ?? '',
+  ogImage: () => responsiveImageSrc(itinerary.value?.images.cover),
 })
 </script>
 
@@ -78,12 +85,21 @@ useSeoMeta({
   <div v-if="itinerary">
     <section
       class="inner-hero inner-hero--image itinerary-hero"
-      :style="{ backgroundImage: `url(${gallery[activeImage]?.url})` }"
       @mouseenter="stopCarousel"
       @mouseleave="startCarousel"
       @focusin="stopCarousel"
       @focusout="startCarousel"
     >
+      <TripportImage
+        v-if="gallery[activeImage]"
+        :key="`${itinerary.slug}-${activeImage}`"
+        class="itinerary-hero__media"
+        :image="gallery[activeImage]"
+        :alt="gallery[activeImage]?.alt || itinerary.title"
+        sizes="100vw"
+        loading="eager"
+        fetchpriority="high"
+      />
       <div class="page-shell inner-hero__content">
         <span class="hero-chip">{{ duration }} · {{ typeLabel }}</span>
         <h1>{{ itinerary.title }}</h1>
@@ -164,7 +180,7 @@ useSeoMeta({
                     <div v-if="item.overnightAt"><span>Overnight</span><p>{{ item.overnightAt }}</p></div>
                   </div>
                 </div>
-                <figure v-if="item.image"><img :src="item.image.url" :alt="item.image.alt"><figcaption>{{ item.title }}</figcaption></figure>
+                <figure v-if="item.image"><TripportImage :image="item.image" :alt="item.image.alt || item.title" :sizes="'(max-width: 620px) calc(100vw - 72px), 230px'" /><figcaption>{{ item.title }}</figcaption></figure>
               </div>
             </div>
           </li>
@@ -237,6 +253,7 @@ useSeoMeta({
 </style>
 
 <style scoped>
+.itinerary-hero{position:relative;isolation:isolate}.itinerary-hero__media{position:absolute;z-index:0;inset:0;width:100%;height:100%;object-fit:cover}.itinerary-hero::before{z-index:1}.itinerary-hero .inner-hero__content{z-index:2}.hero-carousel-controls{z-index:3}
 .hero-carousel-controls>span{font-size:12px}.itinerary-intro{font-size:18px}.journey-facts span,.tag-section__label,.day-item__number span,.day-card__copy small,.day-copy>span,.day-detail-block>span,.day-meta span,.information-card__heading>span,.hotel-list span,.transport-list dt{font-size:11px}.journey-facts strong{font-size:16px}.highlight-list span{font-size:12px}.day-plan-heading p{font-size:16px}.day-card__copy strong{font-size:25px}.day-copy p{font-size:16px}.route-legs strong,.optional-list strong,.activity-list strong{font-size:14px}.route-legs small,.optional-list small,.activity-list small,.information-note{font-size:12px}.route-legs em,.optional-list p,.activity-list p{font-size:13px}.day-meta p{font-size:14px}.day-meta p b{font-size:11px}.itinerary-detail__aside p{font-size:15px}.itinerary-detail__aside>a{font-size:14px}.package-details__heading p{font-size:16px}.information-card__heading p,.hotel-list p{font-size:13px}.hotel-list strong{font-size:16px}.transport-list dd{font-size:14px}.service-list li{font-size:13px}.detail-card li,.policy-card li,.faq-list p{font-size:14px}.important-section li{font-size:14px}.policy-card li strong,.faq-list button strong{font-size:14px}
 @media(max-width:620px){.day-card__copy strong{font-size:21px}.day-copy p{font-size:15px}}
 </style>

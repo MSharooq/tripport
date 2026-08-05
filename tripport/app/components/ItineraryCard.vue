@@ -7,6 +7,7 @@ const duration = computed(() => packageDuration(props.itinerary.duration))
 const packageType = computed(() => packageTypeLabel(props.itinerary.packageType))
 const images = computed(() => [props.itinerary.images.cover, ...(props.itinerary.images.gallery ?? [])])
 const activeImage = ref(0)
+const activeImageAsset = computed(() => images.value[activeImage.value] ?? props.itinerary.images.cover)
 const copiedShareLink = ref(false)
 let copiedShareTimer: ReturnType<typeof setTimeout> | undefined
 
@@ -55,7 +56,13 @@ onBeforeUnmount(() => {
   <article class="itinerary-card">
     <div class="itinerary-card__image" role="group" :aria-label="`${itinerary.title} photo gallery`">
       <NuxtLink class="itinerary-card__image-link" :to="`/itineraries/${itinerary.slug}`" :aria-label="`View ${itinerary.title}`">
-        <img class="itinerary-card__cover" :src="images[activeImage].url" :alt="images[activeImage].alt" loading="lazy">
+        <TripportImage
+          class="itinerary-card__cover"
+          :image="activeImageAsset"
+          :sizes="'(max-width: 720px) calc(100vw - 36px), 33vw'"
+          :alt="activeImageAsset.alt"
+          loading="lazy"
+        />
       </NuxtLink>
       <div v-if="images.length > 1" class="itinerary-card__carousel-controls">
         <button type="button" aria-label="Show previous photo" @click="previousImage"><MaterialIcon name="arrow_back" :size="18" /></button>

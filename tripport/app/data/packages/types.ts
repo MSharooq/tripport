@@ -1,3 +1,5 @@
+import type { ResponsiveImageVariants } from '~/data/images'
+
 export const packageTypes = ['private-tour', 'family-holiday', 'honeymoon', 'group-tour', 'fixed-departure'] as const
 
 export type PackageStatus = 'draft' | 'published' | 'archived'
@@ -7,6 +9,10 @@ export type Meal = 'Breakfast' | 'Lunch' | 'Dinner'
 export interface ImageAsset {
   url: string
   alt: string
+  /** Optional responsive WebP sources created by Tripport Manager. */
+  variants?: ResponsiveImageVariants
+  width?: number
+  height?: number
 }
 
 export interface RouteLeg {
