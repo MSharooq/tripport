@@ -5,7 +5,7 @@ function formatIndianMobileNumber(phoneNumber: string) {
 export const tripportContact = {
   countryCallingCode: '91',
   phoneNumber: '9633191900',
-  email: 'hello@tripport.in',
+  email: 'b2b@tripport.in',
   location: 'Kochi, Kerala, India',
 
   get phoneDisplay() {
