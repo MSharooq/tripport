@@ -50,15 +50,40 @@ export function useManagerAuth() {
     })
   }
 
-  async function sendMagicLink(email: string) {
+  async function signInWithPassword(email: string, password: string) {
     const supabase = useTripportSupabase()
     if (!supabase) throw new Error('Supabase is not configured yet.')
 
-    const { error } = await supabase.auth.signInWithOtp({
+    const { data, error } = await supabase.auth.signInWithPassword({
       email,
-      options: { emailRedirectTo: `${window.location.origin}/admin` },
+      password,
     })
     if (error) throw error
+
+    session.value = data.session
+    await refreshProfile()
+  }
+
+  async function sendPasswordReset(email: string) {
+    const supabase = useTripportSupabase()
+    if (!supabase) throw new Error('Supabase is not configured yet.')
+
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}/admin/reset-password`,
+    })
+    if (error) throw error
+  }
+
+  async function updatePassword(password: string) {
+    const supabase = useTripportSupabase()
+    if (!supabase) throw new Error('Supabase is not configured yet.')
+
+    const { error } = await supabase.auth.updateUser({ password })
+    if (error) throw error
+
+    const { data } = await supabase.auth.getSession()
+    session.value = data.session
+    await refreshProfile()
   }
 
   async function signOut() {
@@ -72,5 +97,5 @@ export function useManagerAuth() {
   const canManage = computed(() => profile.value?.role === 'manager' || profile.value?.role === 'editor')
   const canPublish = computed(() => profile.value?.role === 'manager')
 
-  return { session, profile, isLoading, isReady, configured, canManage, canPublish, initialise, refreshProfile, sendMagicLink, signOut }
+  return { session, profile, isLoading, isReady, configured, canManage, canPublish, initialise, refreshProfile, signInWithPassword, sendPasswordReset, updatePassword, signOut }
 }

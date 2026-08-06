@@ -168,5 +168,5 @@ create policy "Tripport staff can manage media" on storage.objects for all to au
 using (bucket_id = 'tripport-media' and public.is_tripport_staff())
 with check (bucket_id = 'tripport-media' and public.is_tripport_staff());
 
--- Before sending a magic link, add approved staff. Replace the example email.
+-- Before an approved staff member signs in, add them to the staff list. Replace the example email.
 -- insert into public.staff_members (email, role) values ('your-email@example.com', 'manager');
