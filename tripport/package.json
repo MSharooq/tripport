@@ -19,6 +19,8 @@
     "@nuxt/content": "^3.14.0",
     "@supabase/supabase-js": "^2.110.7",
     "browser-image-compression": "^2.0.2",
+    "embla-carousel-autoplay": "^8.6.0",
+    "embla-carousel-vue": "^8.6.0",
     "nuxt": "^4.4.8",
     "vue": "^3.5.35",
     "vue-router": "^5.1.0"

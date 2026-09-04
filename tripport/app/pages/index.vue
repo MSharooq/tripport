@@ -33,10 +33,9 @@ const visibleItineraries = computed(() => selectedPackageType.value === 'All'
   : publishedItineraries.value.filter((item) => item.packageType === selectedPackageType.value).slice(0, 6))
 const visibleDestinations = computed(() => (managedDestinations.value ?? destinations).filter(item => item.status === 'published').slice(0, 8))
 const publishedTestimonials = computed(() => (managedTestimonials.value ?? testimonials).filter(item => item.status === 'published'))
-const featuredTestimonials = computed(() => {
-  const featured = publishedTestimonials.value.filter(item => item.featured)
-  return (featured.length ? featured : publishedTestimonials.value).slice(0, 3)
-})
+const carouselTestimonials = computed(() => [...publishedTestimonials.value]
+  .sort((first, second) => Number(second.featured) - Number(first.featured) || first.sortOrder - second.sortOrder)
+  .slice(0, 9))
 
 function openQuickEnquiry() {
   const itinerary = publishedItineraries.value.find((item) => item.slug === quickItinerary.value)
@@ -116,16 +115,22 @@ function openQuickEnquiry() {
       </div>
     </section>
 
-    <section v-if="featuredTestimonials.length" class="section page-shell testimonial-section">
-      <div class="section-heading"><div><span class="eyebrow">Traveller stories</span><h2>Journeys remembered for the right reasons.</h2></div><p>Genuine feedback from people who have travelled with Tripport.</p></div>
-      <div class="testimonial-grid"><TestimonialCard v-for="testimonial in featuredTestimonials" :key="testimonial.id" :testimonial="testimonial" /></div>
-    </section>
-
     <section class="section page-shell partner-section">
       <span class="section-chip">The Tripport way</span>
       <h2>Made for the journey, not just the checklist.</h2>
       <p>We believe the most memorable Kerala trips leave room to slow down, take in the landscape and enjoy the small details along the way.</p>
       <div class="partner-section__items"><div><strong>Thoughtful route information</strong><span>Clear duration, flow and highlights so you can picture the journey.</span></div><div><strong>Flexible starting points</strong><span>Itineraries ready to adapt around your travel style and interests.</span></div><div><strong>Grounded local knowledge</strong><span>A Kochi-based team focused on Kerala from day one.</span></div></div>
+    </section>
+
+    <section id="traveller-stories" class="section section--soft testimonial-section">
+      <div class="page-shell">
+        <div class="testimonial-section__heading">
+          <div><span class="eyebrow">Traveller stories</span><h2>Journeys remembered for the right reasons.</h2></div>
+          <div><p>Genuine feedback from people who have travelled with Tripport.</p><NuxtLink class="button button--outline testimonial-section__share" to="/share-your-story">Share your story <MaterialIcon name="arrow_forward" :size="18" /></NuxtLink></div>
+        </div>
+        <TestimonialCarousel v-if="carouselTestimonials.length" :testimonials="carouselTestimonials" />
+        <div v-else class="testimonial-section__empty"><MaterialIcon name="star" :size="24" /><div><strong>The first Tripport stories are on their way.</strong><p>Have travelled with us? Your experience can help someone else plan their Kerala journey.</p></div><NuxtLink class="text-link" to="/share-your-story">Share your story <MaterialIcon name="arrow_forward" :size="17" /></NuxtLink></div>
+      </div>
     </section>
 
     <section class="home-cta">
@@ -185,8 +190,5 @@ function openQuickEnquiry() {
 </style>
 
 <style scoped>
-.testimonial-section .section-heading { margin-bottom: 34px; }
-.testimonial-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-@media (max-width: 900px) { .testimonial-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 620px) { .testimonial-grid { grid-template-columns: 1fr; } }
+.testimonial-section__heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.58fr);gap:34px;align-items:end;margin-bottom:34px}.testimonial-section__heading h2{max-width:680px;margin:11px 0 0;color:#183d2f;font-size:clamp(37px,4vw,58px);letter-spacing:-.065em;line-height:.98}.testimonial-section__heading>div:last-child{display:grid;justify-items:start;gap:18px}.testimonial-section__heading p{max-width:410px;margin:0;color:#62746b;font-size:15px;line-height:1.62}.testimonial-section__share{min-height:42px;padding:0 17px;color:var(--forest);border-color:#a8c5b4}.testimonial-section__empty{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:17px;align-items:center;padding:26px 28px;border:1px solid #d8e6de;border-radius:18px;background:#fff}.testimonial-section__empty>.material-icon{display:grid;width:45px;height:45px;place-items:center;border-radius:50%;background:#e9f4ed;color:#226a4e}.testimonial-section__empty strong{display:block;color:#1d4637;font-size:16px}.testimonial-section__empty p{max-width:600px;margin:5px 0 0;color:#718077;font-size:13px;line-height:1.55}@media(max-width:760px){.testimonial-section__heading{grid-template-columns:1fr;gap:18px}.testimonial-section__empty{grid-template-columns:auto minmax(0,1fr);padding:22px}.testimonial-section__empty .text-link{grid-column:2;justify-self:start}}@media(max-width:480px){.testimonial-section__empty{grid-template-columns:1fr}.testimonial-section__empty .text-link{grid-column:auto}}
 </style>

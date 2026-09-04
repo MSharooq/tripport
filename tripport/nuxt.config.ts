@@ -5,6 +5,9 @@ export default defineNuxtConfig({
   compatibilityDate: '2026-07-20',
 
   runtimeConfig: {
+    // Server-only. Used to create private review submissions and short-lived
+    // upload links; never expose this value in the browser.
+    supabaseServiceRoleKey: '',
     public: {
       supabaseUrl: '',
       supabasePublishableKey: '',

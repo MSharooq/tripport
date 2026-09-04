@@ -23,6 +23,9 @@ import remove from '@material-symbols/svg-400/rounded/remove.svg?no-inline'
 import search from '@material-symbols/svg-400/rounded/search.svg?no-inline'
 import share from '@material-symbols/svg-400/rounded/share.svg?no-inline'
 import settings from '@material-symbols/svg-400/rounded/settings.svg?no-inline'
+import star from '@material-symbols/svg-400/rounded/star.svg?no-inline'
+import uploadFile from '@material-symbols/svg-400/rounded/upload_file.svg?no-inline'
+import videocam from '@material-symbols/svg-400/rounded/videocam.svg?no-inline'
 import visibility from '@material-symbols/svg-400/rounded/visibility.svg?no-inline'
 
 const props = withDefaults(defineProps<{
@@ -57,6 +60,9 @@ const icons: Record<string, string> = {
   search,
   share,
   settings,
+  star,
+  upload_file: uploadFile,
+  videocam,
   visibility,
 }
 

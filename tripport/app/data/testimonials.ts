@@ -1,6 +1,12 @@
 import type { PackageStatus } from './packages/types'
 import type { ResponsiveImageVariants } from './images'
 
+export interface TestimonialStoryMedia {
+  type: 'image' | 'video'
+  url: string
+  alt?: string
+}
+
 export interface Testimonial {
   id: string
   status: PackageStatus
@@ -15,6 +21,8 @@ export interface Testimonial {
   imageVariants?: ResponsiveImageVariants
   imageWidth?: number
   imageHeight?: number
+  /** Optional traveller-supplied photo or video, shown with the review. */
+  storyMedia?: TestimonialStoryMedia[]
   itinerarySlug?: string
   permissionConfirmed: boolean
   featured: boolean
