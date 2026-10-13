@@ -11,9 +11,11 @@ import dashboard from '@material-symbols/svg-400/rounded/dashboard.svg?no-inline
 import deleteIcon from '@material-symbols/svg-400/rounded/delete.svg?no-inline'
 import edit from '@material-symbols/svg-400/rounded/edit.svg?no-inline'
 import expandMore from '@material-symbols/svg-400/rounded/keyboard_arrow_down.svg?no-inline'
+import explore from '@material-symbols/svg-400/rounded/explore.svg?no-inline'
 import favorite from '@material-symbols/svg-400/rounded/favorite.svg?no-inline'
 import image from '@material-symbols/svg-400/rounded/image.svg?no-inline'
 import logout from '@material-symbols/svg-400/rounded/logout.svg?no-inline'
+import landscape from '@material-symbols/svg-400/rounded/landscape.svg?no-inline'
 import menu from '@material-symbols/svg-400/rounded/menu.svg?no-inline'
 import moreHoriz from '@material-symbols/svg-400/rounded/more_horiz.svg?no-inline'
 import northEast from '@material-symbols/svg-400/rounded/north_east.svg?no-inline'
@@ -48,9 +50,11 @@ const icons: Record<string, string> = {
   delete: deleteIcon,
   edit,
   expand_more: expandMore,
+  explore,
   favorite_border: favorite,
   image,
   logout,
+  landscape,
   menu,
   more_horiz: moreHoriz,
   north_east: northEast,

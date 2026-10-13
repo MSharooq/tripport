@@ -8,8 +8,12 @@ const whatsappLink = getWhatsAppLink('Hello Tripport, I would like help planning
   <footer class="site-footer">
     <div class="page-shell site-footer__grid">
       <div>
-        <NuxtLink class="brand brand--footer" to="/">
-          <span class="brand__mark"><img src="/images/tripport_logo.svg" alt=""></span><span>Tripport</span>
+        <NuxtLink class="brand brand--footer" to="/" aria-label="Tripport by Lavanya home">
+          <span class="brand__mark"><img src="/images/tripport_logo.svg" alt=""></span>
+          <span class="brand__wordmark">
+            <span class="brand__name">Tripport</span>
+            <span class="brand__endorsement"><span class="brand__by">by</span><img class="brand__lavanya" src="/images/lavanya-wordmark.svg" alt="Lavanya" width="79" height="24"></span>
+          </span>
         </NuxtLink>
         <p>Thoughtfully planned Kerala journeys, made for memorable travel.</p>
         <span class="footer-location">Kochi, Kerala · India</span>

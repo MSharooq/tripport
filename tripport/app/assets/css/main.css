@@ -89,6 +89,51 @@ img {
     white-space: nowrap;
 }
 
+.brand__wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand__name {
+  line-height: 1;
+}
+
+.brand__endorsement {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  letter-spacing: 0;
+}
+
+.brand__by {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  opacity: .8;
+  transform: translateY(2px);
+}
+
+.brand__lavanya {
+  width: 79px;
+  height: auto;
+  object-fit: contain;
+  /* Account for the script's tall capital and descending strokes. */
+  transform: translateY(1px);
+}
+
+@media (max-width: 360px) {
+  .brand {
+    gap: 7px;
+    font-size: 18px;
+  }
+
+  .brand__lavanya {
+    width: 67px;
+  }
+}
+
 .brand__mark {
     display: grid;
     place-items: center;
@@ -217,6 +262,10 @@ img {
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 42px;
     padding-bottom: 56px;
+}
+
+.brand--footer .brand__lavanya {
+    filter: brightness(0) invert(1);
 }
 
 .brand--footer .brand__mark {

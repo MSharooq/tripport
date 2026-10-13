@@ -24,9 +24,12 @@ function closeMobile() {
 <template>
   <header class="site-header" :class="{ 'site-header--home': isHome, 'site-header--mobile-open': mobileOpen }">
     <div class="site-header__inner page-shell">
-      <NuxtLink class="brand" to="/" aria-label="Tripport home" @click="closeMobile">
+      <NuxtLink class="brand" to="/" aria-label="Tripport by Lavanya home" @click="closeMobile">
         <span class="brand__mark"><img src="/images/tripport_logo.svg" alt=""></span>
-        <span>Tripport</span>
+        <span class="brand__wordmark">
+          <span class="brand__name">Tripport</span>
+          <span class="brand__endorsement"><span class="brand__by">by</span><img class="brand__lavanya" src="/images/lavanya-wordmark.svg" alt="Lavanya" width="79" height="24"></span>
+        </span>
       </NuxtLink>
 
       <nav class="desktop-nav" aria-label="Primary navigation">
@@ -57,6 +60,32 @@ function closeMobile() {
 </template>
 
 <style scoped>
+.site-header__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+}
+
+.brand {
+  justify-self: start;
+  flex-shrink: 0;
+}
+
+.site-header--home .brand__lavanya {
+  filter: brightness(0) invert(1);
+}
+
+.desktop-nav {
+  position: static;
+  transform: none;
+  margin-inline: 0;
+}
+
+.header-actions {
+  justify-self: end;
+  flex-shrink: 0;
+  margin-left: 0;
+}
+
 .mobile-toggle {
   width: 42px;
   height: 42px;
@@ -127,11 +156,38 @@ function closeMobile() {
   }
 }
 
+@media (min-width: 1051px) and (max-width: 1240px) {
+  .site-header__inner {
+    gap: 16px;
+  }
+
+  .desktop-nav a {
+    padding-inline: 10px;
+    font-size: 13px;
+  }
+
+  .header-whatsapp {
+    display: none;
+  }
+}
+
 @media (max-width: 1050px) {
+  .site-header__inner {
+    display: flex;
+  }
+
+  .header-actions {
+    margin-left: auto;
+  }
+
   .site-header--home.site-header--mobile-open {
     border-bottom: 1px solid #e5ebe7;
     background: #fff;
     color: #111;
+  }
+
+  .site-header--home.site-header--mobile-open .brand__lavanya {
+    filter: none;
   }
 }
 
@@ -144,4 +200,5 @@ function closeMobile() {
     margin-top: 12px;
   }
 }
+
 </style>

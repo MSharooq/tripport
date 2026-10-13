@@ -8,7 +8,7 @@ useSeoMeta({
   titleTemplate: (title) =>
     title ? `${title} · Tripport` : "Tripport · Thoughtful Kerala Journeys",
   description:
-    "Discover thoughtfully planned Kerala journeys, from a Kochi-based team with more than fifteen years of travel experience.",
+    "Discover thoughtfully planned Kerala journeys with Tripport by Lavanya Travel Service, bringing travel industry experience since 1990.",
   ogSiteName: "Tripport",
   ogType: "website",
   ogImage: `${siteUrl}/og.png`,
